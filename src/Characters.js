@@ -19,7 +19,7 @@ const Characters = ({data}) => {
             {data.map((character)=>{
                 const {char_id, name, img, birthday, occupation, status} = character;
                 return (
-                    <Link to={`/characters/${char_id}`}>
+                    <Link to={`/characters/${char_id}/${name.split(" ")[0]}-${name.split(" ")[1]}`}>
                       <div key={char_id} className="characterOuter">
                           <div className={`status ${statusClass(status)}`} >{status}</div>
                           <div className="character">
